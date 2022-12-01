@@ -1,7 +1,9 @@
 const fastify = require("fastify")({ logger: true })
+const fs = require("fs")
 
 fastify.get("/", async (req, rep) => {
-    return { hello: "Server x" }
+    const stream = fs.createReadStream(("../html/index.html"))
+    await rep.send(stream)
 })
 
 const start = async () => {

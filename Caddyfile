@@ -1,0 +1,5 @@
+    http://IP_ADDRESS {
+        root * /var/www
+        file_server
+    }
+
