@@ -1,5 +1,5 @@
-    http://IP_ADDRESS {
-        root * /var/www
+    http://146.190.0.237/api {
+        root * /var/www/html/
+        reverse_proxy /api localhost:5050
         file_server
     }
-
