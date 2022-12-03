@@ -3,11 +3,10 @@ Description=Run a js file to serve an HTML file with Caddy
 After=network.target
 
 [Service]
+User=webb
+Group=webb
 Type=notify
-ExecStart=/usr/bin/caddy run --environ --config /etc/caddy/Caddyfile
-ExecReload=/usr/bin/caddy reload --config /etc/caddy/Caddyfile --force
-TimeoutStopSec=5
-Killmode=mixed
+ExecStart=/home/webb/.volta/bin/node /home/webb/src/index.js
 
 [Install]
 WantedBy=multi-user.target
