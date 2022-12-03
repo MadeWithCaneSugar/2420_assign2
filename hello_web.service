@@ -7,6 +7,7 @@ User=webb
 Group=webb
 Type=notify
 ExecStart=/home/webb/.volta/bin/node /home/webb/src/index.js
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
